@@ -1,0 +1,21 @@
+.menu {
+  position: absolute;
+  left: -39px;
+  width: 100px;
+  bottom: 25px;
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  box-sizing: border-box;
+  padding: 5px;
+  gap: 5px;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.menu.open {
+  display: flex;
+}
+
+.menu.close {
+  display: none;
+}

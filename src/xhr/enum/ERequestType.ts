@@ -1,0 +1,9 @@
+enum ERequestType {
+  LICENSE = 'LICENSE',
+  MANIFEST = 'MANIFEST',
+  AUDIO_SEGMENT = 'AUDIO_SEGMENT',
+  VIDEO_SEGMENT = 'VIDEO_SEGMENT',
+  TEXT_SEGMENT = 'TEXT_SEGMENT'
+}
+
+export default ERequestType;

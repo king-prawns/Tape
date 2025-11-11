@@ -1,0 +1,53 @@
+.timeline {
+  position: relative;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+  margin-bottom: 3px;
+}
+
+.timeline .time {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  right: 0;
+  left: 0;
+  margin: auto;
+  bottom: 13px;
+}
+
+.timeline .bar {
+  white-space: nowrap;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.bar .progress {
+  width: 100%;
+  background-color: rgb(176, 176, 176);
+  height: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress .current-time {
+  max-width: 100%;
+  background-color: rgb(30, 20, 206);
+  height: 5px;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+}
+
+.progress .buffer {
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  background-color: red;
+  z-index: 1;
+  pointer-events: none;
+}

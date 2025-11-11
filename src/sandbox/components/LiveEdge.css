@@ -1,0 +1,16 @@
+.live-edge {
+  display: flex;
+  align-items: center;
+}
+
+.status {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #4f4d4d;
+  margin-right: 3px;
+}
+
+.status.live {
+  background-color: #e51717;
+}

@@ -1,0 +1,58 @@
+import EEvent from '../enum/EEvent';
+import IActiveAdaptationChangeEvent from './IActiveAdaptationChangeEvent';
+import IActivePeriodChangeEvent from './IActivePeriodChangeEvent';
+import IActiveRepresentationChangeEvent from './IActiveRepresentationChangeEvent';
+import IAvailableTracksEvent from './IAvailableTracksEvent';
+import IBuffersUpdateEvent from './IBuffersUpdateEvent';
+import IBufferUpdateEvent from './IBufferUpdateEvent';
+import ICdnChangeEvent from './ICdnChangeEvent';
+import IChooseRepresentationEvent from './IChooseRepresentationEvent';
+import ICueEnterEvent from './ICueEnterEvent';
+import ICueExitEvent from './ICueExitEvent';
+import IEmeReadyEvent from './IEmeReadyEvent';
+import IEstimatedBandwidthEvent from './IEstimatedBandwidthEvent';
+import IFullscreenChangeEvent from './IFullscreenChangeEvent';
+import IHttpRequestEvent from './IHttpRequestEvent';
+import IHttpResponseEvent from './IHttpResponseEvent';
+import IInbandStreamEvent from './IInbandStreamEvent';
+import IManifestReadyEvent from './IManifestReadyEvent';
+import IPictureInPictureEnterEvent from './IPictureInPictureEnterEvent';
+import IPictureInPictureLeaveEvent from './IPictureInPictureLeaveEvent';
+import IPlayerStateChangeEvent from './IPlayerStateChangeEvent';
+import IRateChangeEvent from './IRateChangeEvent';
+import ISeekableRangeChangeEvent from './ISeekableRangeChangeEvent';
+import ISegmentReadyEvent from './ISegmentReadyEvent';
+import ITapeErrorEvent from './ITapeErrorEvent';
+import ITimeUpdateEvent from './ITimeUpdateEvent';
+import IVolumeChangeEvent from './IVolumeChangeEvent';
+
+interface IEvents {
+  [EEvent.ACTIVE_ADAPTATION_CHANGE]: IActiveAdaptationChangeEvent;
+  [EEvent.ACTIVE_PERIOD_CHANGE]: IActivePeriodChangeEvent;
+  [EEvent.ACTIVE_REPRESENTATION_CHANGE]: IActiveRepresentationChangeEvent;
+  [EEvent.AVAILABLE_TRACKS]: IAvailableTracksEvent;
+  [EEvent.BUFFER_UPDATE]: IBufferUpdateEvent;
+  [EEvent.BUFFERS_UPDATE]: IBuffersUpdateEvent;
+  [EEvent.CDN_CHANGE]: ICdnChangeEvent;
+  [EEvent.CHOOSE_REPRESENTATION]: IChooseRepresentationEvent;
+  [EEvent.CUE_ENTER]: ICueEnterEvent;
+  [EEvent.CUE_EXIT]: ICueExitEvent;
+  [EEvent.EME_READY]: IEmeReadyEvent;
+  [EEvent.ESTIMATED_BANDWIDTH]: IEstimatedBandwidthEvent;
+  [EEvent.FULLSCREEN_CHANGE]: IFullscreenChangeEvent;
+  [EEvent.HTTP_REQUEST]: IHttpRequestEvent;
+  [EEvent.HTTP_RESPONSE]: IHttpResponseEvent;
+  [EEvent.INBAND_STREAM]: IInbandStreamEvent;
+  [EEvent.MANIFEST_READY]: IManifestReadyEvent;
+  [EEvent.PICTURE_IN_PICTURE_ENTER]: IPictureInPictureEnterEvent;
+  [EEvent.PICTURE_IN_PICTURE_LEAVE]: IPictureInPictureLeaveEvent;
+  [EEvent.PLAYER_STATE_CHANGE]: IPlayerStateChangeEvent;
+  [EEvent.RATE_CHANGE]: IRateChangeEvent;
+  [EEvent.SEEKABLE_RANGE_CHANGE]: ISeekableRangeChangeEvent;
+  [EEvent.SEGMENT_READY]: ISegmentReadyEvent;
+  [EEvent.TAPE_ERROR]: ITapeErrorEvent;
+  [EEvent.TIME_UPDATE]: ITimeUpdateEvent;
+  [EEvent.VOLUME_CHANGE]: IVolumeChangeEvent;
+}
+
+export default IEvents;

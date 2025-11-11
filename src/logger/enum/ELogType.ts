@@ -1,0 +1,19 @@
+enum ELogType {
+  ABR = 'ABR',
+  BUFFER = 'BUFFER',
+  CDN = 'CDN',
+  CONFIG = 'CONFIG',
+  DISPATCHER = 'DISPATCHER',
+  DOWNLOADER = 'DOWNLOADER',
+  EME = 'EME',
+  EMITTER = 'EMITTER',
+  ENGINE = 'ENGINE',
+  MP4 = 'MP4',
+  PARSER = 'PARSER',
+  STATE = 'STATE',
+  STREAM = 'STREAM',
+  TIMELINE = 'TIMELINE',
+  XHR = 'XHR'
+}
+
+export default ELogType;

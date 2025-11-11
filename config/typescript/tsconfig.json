@@ -1,0 +1,39 @@
+{
+  "ts-node": {
+    "files": true
+  },
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "lib": ["es2015", "dom"],
+    "module": "commonjs",
+    "jsx": "react",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "es5",
+    "outDir": "../../dist",
+    "baseUrl": ".",
+    "paths": {
+      "@abr/*": ["../../src/abr/*"],
+      "@buffer/*": ["../../src/buffer/*"],
+      "@cdn/*": ["../../src/cdn/*"],
+      "@config/*": ["../../src/config/*"],
+      "@dispatcher/*": ["../../src/dispatcher/*"],
+      "@downloader/*": ["../../src/downloader/*"],
+      "@eme/*": ["../../src/eme/*"],
+      "@emitter/*": ["../../src/emitter/*"],
+      "@engine/*": ["../../src/engine/*"],
+      "@error/*": ["../../src/error/*"],
+      "@logger/*": ["../../src/logger/*"],
+      "@parser/*": ["../../src/parser/*"],
+      "@state/*": ["../../src/state/*"],
+      "@stream/*": ["../../src/stream/*"],
+      "@timeline/*": ["../../src/timeline/*"],
+      "@utils/*": ["../../src/utils/*"],
+      "@xhr/*": ["../../src/xhr/*"]
+    }
+  },
+  "include": ["../../src/**/*"]
+}

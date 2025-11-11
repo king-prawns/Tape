@@ -1,0 +1,15 @@
+.menu-item {
+  padding: 2px;
+}
+
+.menu-item:hover {
+  background-color: var(--color-tertiary);
+}
+
+.menu-item.selected {
+  background-color: var(--color-tertiary);
+}
+
+.menu-item.focus {
+  background-color: var(--color-tertiary);
+}

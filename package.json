@@ -1,0 +1,73 @@
+{
+  "name": "@king-prawns/tape",
+  "version": "0.54.0",
+  "description": "Tape player",
+  "main": "dist/tape.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/king-prawns/Tape.git"
+  },
+  "author": "king-prawns",
+  "license": "MIT",
+  "scripts": {
+    "xpostinstall": "cd ./src/sandbox && npm ci",
+    "dev": "ts-node-dev ./config/webpack/dev.ts",
+    "build": "ts-node-dev ./config/webpack/prod.ts",
+    "lint": "eslint --config ./config/eslint/.eslintrc ./src/**/*.ts",
+    "prettier": "prettier --config ./config/prettier/.prettierrc --list-different src/**/*.ts --ignore-path ../config/prettier/.prettierignore",
+    "typecheck": "tsc -project ./config/typescript/tsconfig.json --noEmit",
+    "test": "jest --config=./config/jest/jest.config.js --silent"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write --config ./config/prettier/.prettierrc",
+      "eslint --config ./config/eslint/.eslintrc --no-error-on-unmatched-pattern --fix"
+    ]
+  },
+  "devDependencies": {
+    "@types/enzyme": "3.10.12",
+    "@types/fs-extra": "9.0.13",
+    "@types/jest": "28.1.0",
+    "@types/react": "18.0.10",
+    "@types/react-dom": "18.0.5",
+    "@types/terser-webpack-plugin": "5.2.0",
+    "@types/webpack": "5.28.0",
+    "@types/webpack-dev-server": "4.7.2",
+    "@typescript-eslint/eslint-plugin": "5.27.0",
+    "@typescript-eslint/parser": "5.27.0",
+    "chalk": "4.1.2",
+    "css-loader": "6.7.1",
+    "enzyme": "3.11.0",
+    "eslint": "8.16.0",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "fs-extra": "10.1.0",
+    "html-loader": "3.1.0",
+    "html-webpack-plugin": "5.5.0",
+    "husky": "4.3.8",
+    "jest": "28.1.0",
+    "lint-staged": "13.0.0",
+    "prettier": "2.6.2",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "style-loader": "3.3.1",
+    "terser-webpack-plugin": "5.3.3",
+    "ts-jest": "28.0.4",
+    "ts-loader": "9.3.0",
+    "ts-node-dev": "2.0.0",
+    "tsconfig-paths-webpack-plugin": "3.5.2",
+    "ttypescript": "1.5.13",
+    "typescript": "4.7.3",
+    "typescript-transform-paths": "3.3.1",
+    "url-loader": "4.1.1",
+    "webpack": "5.73.0",
+    "webpack-cli": "4.9.2",
+    "webpack-dev-server": "4.9.1",
+    "webpack-merge": "5.8.0"
+  }
+}

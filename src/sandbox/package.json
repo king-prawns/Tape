@@ -1,0 +1,11 @@
+{
+  "name": "@king-prawns/tape-sandbox",
+  "version": "1.0.0",
+  "description": "Tape Sandbox",
+  "main": "index.tsx",
+  "author": "king-prawns",
+  "license": "MIT",
+  "devDependencies": {
+    "process": "0.11.10"
+  }
+}

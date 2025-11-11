@@ -1,0 +1,10 @@
+interface ITrun {
+  sampleCount: number;
+  sampleData: Array<{
+    sampleDuration: number | null;
+    sampleSize: number | null;
+    sampleCompositionTimeOffset: number | null;
+  }>;
+}
+
+export default ITrun;
