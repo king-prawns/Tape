@@ -158,7 +158,11 @@ class DashParser implements IParser {
       baseUrl = this._manifestBaseUrl;
     }
 
-    const periods: Array<IPeriod> = this.buildPeriods(tags[ETagName.PERIOD], baseUrl);
+    const periods: Array<IPeriod> = this.buildPeriods(
+      tags[ETagName.PERIOD],
+      mediaPresentationDuration,
+      baseUrl
+    );
 
     return {
       type,
@@ -174,13 +178,17 @@ class DashParser implements IParser {
     };
   }
 
-  private buildPeriods(periodElements: Array<Element>, partialBaseUrl: string): Array<IPeriod> {
+  private buildPeriods(
+    periodElements: Array<Element>,
+    mediaPresentationDuration: number,
+    partialBaseUrl: string
+  ): Array<IPeriod> {
     const periods: Array<IPeriod> = [];
     for (let i: number = 0; i < periodElements.length; i++) {
       const periodElement: Element = periodElements[i];
       const idAttr: string = periodElement.getAttribute('id') || '';
       const durationAttr: string = periodElement.getAttribute('duration') || '';
-      const duration: number = this.getDuration(durationAttr) || Infinity;
+      const duration: number = this.getDuration(durationAttr) || mediaPresentationDuration;
       const startAttr: string = periodElement.getAttribute('start') || '';
       const start: number = this.getDuration(startAttr);
 
@@ -635,6 +643,7 @@ class DashParser implements IParser {
       let totalSegments: number = endNumber;
       const d: number = duration / timescale;
       let t: number = d;
+
       if (!totalSegments) {
         totalSegments = Math.ceil(periodDuration / d);
       }
