@@ -30,8 +30,7 @@ const prodConfig: Configuration = merge(base, {
         exclude: [/node_modules/],
         loader: 'ts-loader',
         options: {
-          configFile: path.resolve(__dirname, '../typescript/tsconfig.prod.json'),
-          compiler: 'ttypescript'
+          configFile: path.resolve(__dirname, '../typescript/tsconfig.prod.json')
         }
       }
     ]

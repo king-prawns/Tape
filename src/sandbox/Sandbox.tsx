@@ -124,7 +124,7 @@ class Sandbox extends React.Component<IProps, IState> {
         cdns: ['http://localhost:8080/', 'http://localhost:8082/']
       },
       stream: {
-        autoplay: true,
+        autoplay: false,
         startingPosition: 0
       }
     });
