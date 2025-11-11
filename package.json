@@ -1,5 +1,5 @@
 {
-  "name": "tape-player",
+  "name": "@king-prawns/tape",
   "version": "0.54.0",
   "description": "Tape player",
   "main": "dist/tape.js",
