@@ -1,5 +1,5 @@
 {
-  "name": "@king-prawns/tape-sandbox",
+  "name": "tape-player-sandbox",
   "version": "1.0.0",
   "description": "Tape Sandbox",
   "main": "index.tsx",
